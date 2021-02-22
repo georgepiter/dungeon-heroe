@@ -1,8 +1,8 @@
 {
-  "name": "heroway-js4gamers",
+  "name": "dungeon-heroe",
   "version": "1.0.0",
-  "description": "Javascript 4 Gamers - Aprenda JS criando um game!",
-  "author": "Gabriel Tosta <gabrieltosta3@gmail.com>",
+  "description": "Game desenvolvido em Java Script",
+  "author": "George Piter",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
