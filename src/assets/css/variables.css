@@ -1,5 +1,0 @@
-:root {
-  --tile-size: 48px;
-  --helmet-offset: 12px;
-  --game-size: calc(var(--tile-size) * 20);
-}
