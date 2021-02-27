@@ -180,6 +180,27 @@ function createBoard() {
  board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
  board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
  board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 10});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 10});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 10});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 9});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 17});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 17});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 10});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 4});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 3});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 1});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
 
  board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 14, left: TILE_SIZE * 14});
  board.createItem({ item:'trap', top: TILE_SIZE * 15, left: TILE_SIZE * 6}); 
@@ -190,8 +211,8 @@ function createBoard() {
  board.createItem({ item:'trap', top: TILE_SIZE * 15, left: TILE_SIZE * 15}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 10, left: TILE_SIZE * 13}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 9, left: TILE_SIZE * 17}); 
- board.createItem({ item:'trap', top: TILE_SIZE * 14, left: TILE_SIZE * 21}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 5, left: TILE_SIZE * 9}); 
+ 
 //  board.createBoss({ item:'demon', top: TILE_SIZE * 16, left: TILE_SIZE * 3});
 
  board.createItem({ item: 'chest', top: TILE_SIZE * 2, left: TILE_SIZE * 17});
