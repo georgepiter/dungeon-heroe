@@ -61,6 +61,15 @@ function createBoard() {
     }
 
     function validateConflict(currentEl, conflictItem) {
+
+        function finishGame(message){
+            setTimeout(() => {
+                alert(message);
+                location.reload();
+            }, 100);
+           
+        }
+
         if(!conflictItem) {
             return;
         }
@@ -68,21 +77,17 @@ function createBoard() {
         if(currentEl.item ==='hero') {
 
             if(conflictItem?.item === 'mini-demon' || conflictItem?.item === 'trap') {
-                console.log('Morreu');
+                finishGame('Morreu');
             }
                 if(conflictItem?.item === 'chest') {
-                    console.log("vitória");
+                    finishGame("vitória");
                 }
         }
 
         if(currentEl.item === 'mini-demon' && conflictItem.item === 'hero') {
-            console.log('Você foi comido');
+            finishGame('Você foi comido');
         }       
-    }
-        
-
-
-    
+    }   
 
     function move(buttonPressed) {
       const newPosition =  getNewDirection(buttonPressed, currentElement.currentPosition);
@@ -117,6 +122,21 @@ function createBoard() {
 
     });
   }
+//   function createBoss(options) {
+//     const boss = createElement({    
+//         item: 'demon',
+//         top: options.top,
+//         left: options.left,
+//         option: options
+//     });
+
+//     setInterval(() => {
+//         const direction = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
+//         const randomIndex = Math.floor (Math.random() * direction.length);
+//         const randomDirection = direction[randomIndex];
+//         boss.move(randomDirection);
+//     },500)    
+// } 
 
   function createEnemy(options) {
     const enemy = createElement({    
@@ -131,15 +151,14 @@ function createBoard() {
         const randomIndex = Math.floor (Math.random() * direction.length);
         const randomDirection = direction[randomIndex];
         enemy.move(randomDirection);
-    },500) 
-
-   
+    },500)    
 }
 
   return {
       createItem: createItem,
       createHero: createHero,
       createEnemy: createEnemy,
+    //   createBoss: createBoss,
   }
 }
 
@@ -154,21 +173,28 @@ function createBoard() {
  board.createItem({ item:'forniture', top: TILE_SIZE * 2, left: TILE_SIZE * 16});
  board.createItem({ item:'forniture', top: TILE_SIZE * 2, left: TILE_SIZE * 3});
 
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 16});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 16});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 16});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 16});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
+ board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 5, left: TILE_SIZE * 15});
 
-
- board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 15});
- board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 12, left: TILE_SIZE * 5});
- board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 10, left: TILE_SIZE * 6});
- board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 9, left: TILE_SIZE * 3});
- board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 15, left: TILE_SIZE * 15});
  board.createEnemy({ item:'mini-demon', top: TILE_SIZE * 14, left: TILE_SIZE * 14});
  board.createItem({ item:'trap', top: TILE_SIZE * 15, left: TILE_SIZE * 6}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 10, left: TILE_SIZE * 5}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 9, left: TILE_SIZE * 7}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 14, left: TILE_SIZE * 10}); 
  board.createItem({ item:'trap', top: TILE_SIZE * 5, left: TILE_SIZE * 8}); 
+ board.createItem({ item:'trap', top: TILE_SIZE * 15, left: TILE_SIZE * 15}); 
+ board.createItem({ item:'trap', top: TILE_SIZE * 10, left: TILE_SIZE * 13}); 
+ board.createItem({ item:'trap', top: TILE_SIZE * 9, left: TILE_SIZE * 17}); 
+ board.createItem({ item:'trap', top: TILE_SIZE * 14, left: TILE_SIZE * 21}); 
+ board.createItem({ item:'trap', top: TILE_SIZE * 5, left: TILE_SIZE * 9}); 
+//  board.createBoss({ item:'demon', top: TILE_SIZE * 16, left: TILE_SIZE * 3});
 
- board.createItem({ item: 'chest', top: TILE_SIZE * 15, left: TILE_SIZE * 17});
+ board.createItem({ item: 'chest', top: TILE_SIZE * 2, left: TILE_SIZE * 17});
  board.createHero({ item: 'hero', top: TILE_SIZE * 16, left: TILE_SIZE * 2});
 
 
